@@ -36,6 +36,12 @@
             <version>${jsp-api.version}</version>
             <scope>provided</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        
         <!-- 文件上传组件 -->
         <dependency>
             <groupId>commons-fileupload</groupId>
