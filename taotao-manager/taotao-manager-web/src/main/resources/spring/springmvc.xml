@@ -21,4 +21,10 @@
     <!-- springmvc前端控制器配置拦截 /：会拦截所有请求包括静态资源。需要添加静态资源的映射。 -->
     <mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
     <mvc:resources location="/WEB-INF/js/" mapping="/js/**" />
+
+    <!-- 文件上传解析器 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8" />
+        <property name="maxUploadSize" value="5242880" />
+    </bean>
 </beans>
