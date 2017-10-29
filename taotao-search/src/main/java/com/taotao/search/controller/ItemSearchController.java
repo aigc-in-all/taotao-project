@@ -27,6 +27,7 @@ public class ItemSearchController {
         }
 
         try {
+            queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
             SearchResult result = searchService.search(queryString, page, 20);
             return TaotaoResult.ok(result);
         } catch (Exception e) {
